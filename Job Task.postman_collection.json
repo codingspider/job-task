@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "416f9fc3-e678-4676-ba3e-f16d63f47f56",
+		"name": "Job Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6484131",
+		"_collection_link": "https://dark-flare-712635.postman.co/workspace/matka-live-api~2d5584a1-4563-406f-8f61-4614198bc9c1/collection/6484131-416f9fc3-e678-4676-ba3e-f16d63f47f56?action=share&source=collection_link&creator=6484131"
+	},
+	"item": [
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Md Arif",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "arif@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}register",
+					"host": [
+						"{{url}}register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "engrokon.rok@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "This is post one title",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "This is post one content",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}post/store",
+					"host": [
+						"{{url}}post"
+					],
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}post/1",
+					"host": [
+						"{{url}}post"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}posts",
+					"host": [
+						"{{url}}posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "New tsk 2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}task/store",
+					"host": [
+						"{{url}}task"
+					],
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task updated",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "This is new task",
+							"type": "text"
+						},
+						{
+							"key": "is_completed",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}task/update/1",
+					"host": [
+						"{{url}}task"
+					],
+					"path": [
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All pending task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}get/pending/task",
+					"host": [
+						"{{url}}get"
+					],
+					"path": [
+						"pending",
+						"task"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api/",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "3|FLbrzbBRinb1ZFpqcJvbgLyzvHLXTtXA9ooFegcnbef5226b",
+			"type": "string"
+		}
+	]
+}

@@ -10,7 +10,7 @@ Step 3: Create a new database and change the database name and database password
 
 Step 4: Run php artisan migrate
 
-Step 5: Find the api collection in the root directory
+Step 5: Find the api collection in the root directory. file name (Job Task.postman_collection.json)
 
 Step 6: Run php artisan serve
 

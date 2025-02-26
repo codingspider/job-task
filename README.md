@@ -1,4 +1,4 @@
-Note:: I am using Larael 10 and php 8.1. Please try to use similar versions of php. 
+Note:: I am using Laravel 10 and php 8.1. Please try to use similar versions of php. 
 
 
 

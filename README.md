@@ -1,3 +1,7 @@
+Note:: I am using Larael 10 and php 8.1. Please try to use similar versions of php. 
+
+
+
 Step 1: Pull the repository
 
 Step 2: Run composer update command

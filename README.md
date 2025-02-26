@@ -4,7 +4,7 @@ Note:: I am using Larael 10 and php 8.1. Please try to use similar versions of p
 
 Step 1: Pull the repository
 
-Step 2: Run composer update command
+Step 2: Run composer install or update command
 
 Step 3: Create a new database and change the database name and database password in .env file
 
